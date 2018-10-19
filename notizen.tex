@@ -1,0 +1,153 @@
+\documentclass[english]{scrartcl}
+\usepackage{babel}
+\usepackage{csquotes}
+
+% typography
+\usepackage{fontspec}
+\setmainfont{Open Sans}[
+  BoldFont={Open Sans Bold},
+  ItalicFont={Open Sans Italic}]
+\setsansfont{Open Sans}[
+  BoldFont={Open Sans Bold},
+  ItalicFont={Open Sans Italic}]
+\setmonofont{Menlo}
+\usepackage[factor=2000]{microtype}
+
+% graphics, drawings, etc.
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage[most]{tcolorbox}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{shapes.arrows}
+\usetikzlibrary{trees}
+\newtcolorbox{anmerkung}{%
+  grow to left by=10pt,
+  colback=black!10,
+  colframe=white,
+  coltitle=black,
+  borderline west={4pt}{0pt}{black!30},
+  boxrule=0pt,
+  boxsep=0pt,
+  %breakable,
+  enhanced jigsaw,
+  title={Note\par},
+  fonttitle={\bfseries},
+  attach title to upper={}}
+
+% highlighting, lists, code
+\usepackage{soul}
+\usepackage{enumitem}
+\usepackage{listings}
+\lstset{
+  morekeywords={interface},
+  basicstyle=\ttfamily,
+  escapeinside=||,
+  keywordstyle=\color{blue!50!black},
+  stringstyle=\color{green!50!black}}
+
+% nice tables
+\usepackage{booktabs}
+\newcommand{\tablespacing}[1]{\renewcommand{\arraystretch}{#1}}
+
+% links
+\usepackage[
+  colorlinks,
+  linkcolor={red!50!black},
+  citecolor={blue!50!black},
+  urlcolor={blue!80!black}
+]{hyperref}
+
+\title{Software Engineering}
+\date{Wintersemester 2018-2019}
+\author{Dr. Michael Eichberg}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+\section{What is Software?}
+
+There are differing definitions of the word \emph{software}, but in general \hl{it is more than just the code}. It is understood to also include the documentation and configuration. 
+
+\subsection{Types of Software}
+
+One can differentiate between two general groups of software. 
+\begin{itemize}
+  \item Generic products.
+  
+  This includes anything that you would call \emph{shrink-wrapped software}. Examples are Microsoft Office, Open Office, Photoshop, etc.
+  
+  \item Customised products.
+  
+  These are products that are customised for a particular purpose. Examples of this would be TUCaN (\emph{TU Campus Network}), an air traffic control system, etc.
+\end{itemize}
+
+\subsection{Properties of Software}
+
+Software has some unique properties compared to hardware. For one thing, software does not physically exist, so it's basically free to reproduce. It also doesn't wear out or need to be replaced. It does, however, need to be \emph{maintained}, meaning that it needs to be updated to cope with changing environments, otherwise it will become obsolete. As such, software is also incredibly hard to measure. How could one define (and quantify?) the quality of software? Are certain properties (amount of lines of code, amount of comments) correlated to the quality? How can progress be measured?
+
+% TODO figure
+
+
+\section{What is Software Engineering?}
+
+The term comes from the sixties and is often attributed to F.L. Bauer. It describes the discipline of systematically developing software following engineering principles. This is opposed to an artistic way of software development.
+
+\subsection{Areas of Software Design}
+
+% TODO figure
+
+\begin{itemize}
+\item Software Requirements
+
+\emph{The requirements define what the systems is expected to do}.
+\item Software Design
+
+\emph{How the system is designed}.
+\item Software Testing
+
+\emph{The systematic identification (and elimination) of errors}.
+\item Software Maintenance
+\item Software Configuration Management
+
+\emph{The management of different versions and configuration of a software}.
+\item Software Engineering Process
+
+\emph{Definition and improvement of software development processes}.
+\item Software Engineering Tools and Methods
+\item Software Quality
+\end{itemize}
+
+\subsection{Why do Software Projects Fail?}
+
+Software development can fail for a large number of reasons.
+
+\begin{itemize}
+\item The requirements and system dependencies are not well-defined
+\item Changing the requirements during the development is much, much easier for software than for hardware;  
+(Software has to accommodate for hardware “issues”.)
+\item Lack of tools, methods, education, planning, ...
+\end{itemize}
+
+\begin{anmerkung}
+A recent paper published was really insightful into the unknowns of software design. The authors specified a system they wanted built, and asked a large number of companies to develop it for them. Afterwards, they compared the budget the companies used for the development, and the timing.
+
+% TODO find link.
+\end{anmerkung}
+
+
+\subsection{Takeaway}
+
+Engineering software is hard; this lecture teaches you why and (to some extent) how to tackle common problems.
+\hl{Software engineering is about designing software and not about building software}.
+
+\end{document}
+
+
+
+
+
+
+
