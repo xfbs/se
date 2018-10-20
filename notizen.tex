@@ -74,15 +74,10 @@ There are differing definitions of the word \emph{software}, but in general \hl{
 \subsection{Types of Software}
 
 One can differentiate between two general groups of software. 
-\begin{itemize}
-  \item Generic products.
-  
-  This includes anything that you would call \emph{shrink-wrapped software}. Examples are Microsoft Office, Open Office, Photoshop, etc.
-  
-  \item Customised products.
-  
-  These are products that are customised for a particular purpose. Examples of this would be TUCaN (\emph{TU Campus Network}), an air traffic control system, etc.
-\end{itemize}
+\begin{description}
+\item[Generic products] This includes anything that you would call \emph{shrink-wrapped software}. Examples are Microsoft Office, Open Office, Photoshop, etc.
+\item[Customised products] These are products that are customised for a particular purpose. Examples of this would be TUCaN (\emph{TU Campus Network}), an air traffic control system, etc.
+\end{description}
 
 \subsection{Properties of Software}
 
@@ -99,42 +94,23 @@ The term comes from the sixties and is often attributed to F.L. Bauer. It descri
 
 % TODO figure
 
-\begin{itemize}
-\item Software Requirements
-
-\emph{The requirements define what the systems is expected to do}.
-\item Software Design
-
-\emph{How the system is designed}.
-\item Software Testing
-
-\emph{The systematic identification (and elimination) of errors}.
-\item Software Maintenance
-\item Software Configuration Management
-
-\emph{The management of different versions and configuration of a software}.
-\item Software Engineering Process
-
-\emph{Definition and improvement of software development processes}.
-\item Software Engineering Tools and Methods
-\item Software Quality
-\end{itemize}
+\begin{description}
+\item[Software Requirements] The requirements define what the systems is expected to do.
+\item[Software Design] How the system is designed.
+\item[Software Testing] The systematic identification (and elimination) of errors.
+\item[Software Maintenance]
+\item[Software Configuration Management] The management of different versions and configuration of a software.
+\item[Software Engineering Process] Definition and improvement of software development processes.
+\item[Software Engineering Tools and Methods]
+\item[Software Quality]
+\end{description}
 
 \subsection{Why do Software Projects Fail?}
 
-Software development can fail for a large number of reasons.
-
-\begin{itemize}
-\item The requirements and system dependencies are not well-defined
-\item Changing the requirements during the development is much, much easier for software than for hardware;  
-(Software has to accommodate for hardware “issues”.)
-\item Lack of tools, methods, education, planning, ...
-\end{itemize}
+Software development can fail for a large number of reasons. Often, the requirements and system dependencies are not well-defined, leading to more effort begin put in. Since changing the requirements during the development is much, much easier for software than for hardware, sometimes software has to accommodate for issues with the hardware. Lack of tools, methods, education and planning also often contribute to failed projects.
 
 \begin{anmerkung}
-A recent paper published was really insightful into the unknowns of software design. The authors specified a system they wanted built, and asked a large number of companies to develop it for them. Afterwards, they compared the budget the companies used for the development, and the timing.
-
-% TODO find link.
+One curious reason for the failure of software projects is \emph{overbudgeting}. When a project needs to be finished quickly, one common idea is to add more people to the team. But in effect, while this can increase the productivity, it also greatly increases the communication overhead. Frederick Brooks discusses this in detail in his famous book \emph{The Mythical Man-Month}.
 \end{anmerkung}
 
 
