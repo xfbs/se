@@ -17,6 +17,7 @@ Die Vorlesung wird *nicht* aufgezeichnet. Es gibt Übungen, die in Teams gelöst
 ## Nützliches
 
 *   [Software Engineering Podcast](https://se-radio.net/)
+*   Tutorial: [How to install Java 11 on macOS](https://asciinema.org/a/qEsQtmzyRzv0k0ZVbhT5Q5Kdd)
 
 ## Inhalt
 
