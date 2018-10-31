@@ -1,4 +1,13 @@
-package ex1;
+package ex01;
 
-class Var implements BooleanExpression {
+public class Var implements BooleanExpression {
+  final String name;
+
+  public Var(String name) {
+    this.name = name;
+  }
+
+  public String getName() {
+    return name;
+  }
 }

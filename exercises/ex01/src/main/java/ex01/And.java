@@ -1,4 +1,19 @@
-package ex1;
+package ex01;
 
-class And implements BooleanExpression {
+public class And implements BooleanExpression {
+  final BooleanExpression lhs;
+  final BooleanExpression rhs;
+
+  public And(BooleanExpression lhs, BooleanExpression rhs) {
+    this.lhs = lhs;
+    this.rhs = rhs;
+  }
+
+  public BooleanExpression getLeftOp() {
+    return lhs;
+  }
+
+  public BooleanExpression getRightOp() {
+    return rhs;
+  }
 }

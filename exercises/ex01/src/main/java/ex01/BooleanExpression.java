@@ -1,4 +1,4 @@
 package ex01;
 
-public interface BooleanExpression {
+interface BooleanExpression {
 }
