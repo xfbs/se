@@ -1,7 +1,10 @@
 package ex01;
 import java.util.Stack;
+import java.util.Map;
 
 public interface BooleanExpression {
+  // parse an reverse-polish boolean expression, so that for example "a a &" gets turned
+  // into And(Var("a"), Var("a")).
   public static BooleanExpression parseExpression(String expr) {
     // stack to hold arguments. notice how long that is? yeah, I'm not a huge fan of java.
     Stack<BooleanExpression> stack = new Stack<>();
@@ -43,4 +46,10 @@ public interface BooleanExpression {
 
     return stack.pop();
   }
+
+  // convert a parsed boolean expression back to reverse-polish notation.
+  public String toPostfixString();
+
+  // evaluate a boolean expression, given a list of truthiness values of the inputs.
+  public boolean evaluate(Map<String, Boolean> param);
 }

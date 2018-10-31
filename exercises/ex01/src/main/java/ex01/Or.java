@@ -1,4 +1,5 @@
 package ex01;
+import java.util.Map;
 
 public class Or implements BooleanExpression {
   final BooleanExpression lhs;
@@ -15,5 +16,13 @@ public class Or implements BooleanExpression {
 
   public BooleanExpression getRightOp() {
     return rhs;
+  }
+
+  public String toPostfixString() {
+    return String.join(" ", rhs.toPostfixString(), lhs.toPostfixString(), "|");
+  }
+
+  public boolean evaluate(Map<String, Boolean> param) {
+    return rhs.evaluate(param) || lhs.evaluate(param);
   }
 }
