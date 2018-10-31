@@ -1,6 +1,6 @@
 package ex01;
 
-class Not implements BooleanExpression {
+public class Not implements BooleanExpression {
   final BooleanExpression op;
 
   public Not(BooleanExpression op) {

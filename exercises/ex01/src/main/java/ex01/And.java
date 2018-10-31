@@ -10,10 +10,10 @@ public class And implements BooleanExpression {
   }
 
   public BooleanExpression getLeftOp() {
-    return lhs;
+    return this.lhs;
   }
 
   public BooleanExpression getRightOp() {
-    return rhs;
+    return this.rhs;
   }
 }

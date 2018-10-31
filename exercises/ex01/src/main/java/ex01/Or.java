@@ -1,6 +1,6 @@
 package ex01;
 
-class Or implements BooleanExpression {
+public class Or implements BooleanExpression {
   final BooleanExpression lhs;
   final BooleanExpression rhs;
 
