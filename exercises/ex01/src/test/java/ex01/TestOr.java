@@ -1,4 +1,4 @@
-import org.junit.Assert;
+import static org.junit.Assert.*;
 import org.junit.Test;
 import ex01.Or;
 import ex01.Var;
@@ -15,12 +15,12 @@ public class TestOr {
   @Test
   public void can_get_left_op() {
     var subject = new Or(a, b);
-    Assert.assertEquals(subject.getLeftOp(), a);
+    assertEquals(subject.getLeftOp(), a);
   }
 
   @Test
   public void can_get_right_op() {
     var subject = new Or(a, b);
-    Assert.assertEquals(subject.getRightOp(), b);
+    assertEquals(subject.getRightOp(), b);
   }
 }

@@ -1,4 +1,4 @@
-import org.junit.Assert;
+import static org.junit.Assert.*;
 import org.junit.Test;
 import ex01.Not;
 import ex01.Var;
@@ -14,6 +14,6 @@ public class TestNot {
   @Test
   public void can_get_op() {
     var subject = new Not(a);
-    Assert.assertEquals(subject.getOp(), a);
+    assertEquals(subject.getOp(), a);
   }
 }
