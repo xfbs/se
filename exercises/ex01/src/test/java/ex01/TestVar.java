@@ -11,6 +11,6 @@ public class TestVar {
   @Test
   public void can_get_name() {
     var subject = new Var("a");
-    Assert.assertEquals(subject.getName(), "a");
+    assertEquals(subject.getName(), "a");
   }
 }

@@ -3,8 +3,8 @@ import java.util.Stack;
 
 public interface BooleanExpression {
   public static BooleanExpression parseExpression(String expr) {
-    // stack to hold arguments.
-    Stack<BooleanExpression> stack = new Stack();
+    // stack to hold arguments. notice how long that is? yeah, I'm not a huge fan of java.
+    Stack<BooleanExpression> stack = new Stack<>();
 
     // split expression at whitespace, loop over items.
     for(String current : expr.split("\\s+")) {
@@ -13,14 +13,30 @@ public interface BooleanExpression {
         continue;
       }
 
-      switch(current.charAt(0)) {
-        case '&': stack.push(new And(stack.pop(), stack.pop())); break;
-        case '|': stack.push(new Or(stack.pop(), stack.pop())); break;
-        case '!': stack.push(new Not(stack.pop())); break;
-        default:  stack.push(new Var(current)); break;
+      // bette to ask for forgiveness than to ask for permission. we'll access the stack
+      // here, and wrap the whole thing in a try/catch block to guard against situations
+      // where people use an op and there aren't enough arguments on the stack. this would
+      // have been *much* shorter in ruby. 
+      try {
+        if(current.length() == 1) switch(current.charAt(0)) {
+          case '&': stack.push(new And(stack.pop(), stack.pop())); continue;
+          case '|': stack.push(new Or(stack.pop(), stack.pop())); continue;
+          case '!': stack.push(new Not(stack.pop())); continue;
+        }
+
+        // if it ain't empty and it ain't an operator, it's gotta be a var.
+        stack.push(new Var(current));
+      } catch(java.util.EmptyStackException e) {
+        throw new IllegalArgumentException("can't access parameters on the stack.");
+      } catch(Exception e) {
+        // if it's an exception we don't recognise, we don't give a fuck and just pass
+        // it down.
+        throw e;
       }
     }
 
+    // make sure there are no arguments remaining on the stack. this happens when someone
+    // passes too many, for example in "a a !", where ! is a unary operator.
     if(stack.size() != 1) {
       throw new IllegalArgumentException("expression can't be empty or have extra aguments");
     }
