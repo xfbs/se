@@ -30,8 +30,17 @@ public class Or implements BooleanExpression {
 
   public List<BooleanExpression> disjunctiveTerms() {
     var terms = new ArrayList<BooleanExpression>();
-    terms.add(lhs);
-    terms.add(rhs);
+    
+    // recursively apply disjunctive terms, and add the results to the list of
+    // terms.
+    for(var term : lhs.disjunctiveTerms()) {
+      terms.add(term);
+    }
+
+    for(var term : rhs.disjunctiveTerms()) {
+      terms.add(term);
+    }
+
     return terms;
   }
 }

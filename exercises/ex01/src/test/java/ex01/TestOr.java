@@ -55,4 +55,15 @@ public class TestOr {
     assertEquals(terms.get(0), a);
     assertEquals(terms.get(1), b);
   }
+
+  @Test
+  public void can_make_nested_disjunctive_terms() {
+    var subject = new Or(new Or(a, b), new Or(a, b));
+    var terms = subject.disjunctiveTerms();
+    assertEquals(terms.size(), 4);
+    assertEquals(terms.get(0), a);
+    assertEquals(terms.get(1), b);
+    assertEquals(terms.get(2), a);
+    assertEquals(terms.get(3), b);
+  }
 }
