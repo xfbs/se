@@ -1,6 +1,8 @@
 package ex01;
 import java.util.Stack;
 import java.util.Map;
+import java.util.List;
+import java.util.ArrayList;
 
 public interface BooleanExpression {
   // parse an reverse-polish boolean expression, so that for example "a a &" gets turned
@@ -52,4 +54,12 @@ public interface BooleanExpression {
 
   // evaluate a boolean expression, given a list of truthiness values of the inputs.
   public boolean evaluate(Map<String, Boolean> param);
+
+  // given a boolean expression, generates a list of disjunctive terms that expresses the
+  // boolean expression.
+  default public List<BooleanExpression> disjunctiveTerms() {
+    var terms = new ArrayList<BooleanExpression>();
+    terms.add(this);
+    return terms;
+  }
 }

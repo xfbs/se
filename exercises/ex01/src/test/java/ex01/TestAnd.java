@@ -46,4 +46,12 @@ public class TestAnd {
     assertEquals(ba.evaluate(params), false);
     assertEquals(bb.evaluate(params), false);
   }
+
+  @Test
+  public void can_make_disjunctive_terms() {
+    var subject = new And(a, b);
+    var terms = subject.disjunctiveTerms();
+    assertEquals(terms.size(), 1);
+    assertEquals(terms.get(0), subject);
+  }
 }

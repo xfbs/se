@@ -40,4 +40,12 @@ public class TestVar {
     var x = new Var("x");
     x.evaluate(params);
   }
+
+  @Test
+  public void can_make_disjunctive_terms() {
+    var subject = new Var("a");
+    var terms = subject.disjunctiveTerms();
+    assertEquals(terms.size(), 1);
+    assertEquals(terms.get(0), subject);
+  }
 }

@@ -46,4 +46,13 @@ public class TestOr {
     assertEquals(ba.evaluate(params), true);
     assertEquals(bb.evaluate(params), false);
   }
+
+  @Test
+  public void can_make_disjunctive_terms() {
+    var subject = new Or(a, b);
+    var terms = subject.disjunctiveTerms();
+    assertEquals(terms.size(), 2);
+    assertEquals(terms.get(0), a);
+    assertEquals(terms.get(1), b);
+  }
 }

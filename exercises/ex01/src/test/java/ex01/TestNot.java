@@ -36,4 +36,12 @@ public class TestNot {
     assertEquals(nota.evaluate(params), false);
     assertEquals(notb.evaluate(params), true);
   }
+
+  @Test
+  public void can_make_disjunctive_terms() {
+    var subject = new Not(a);
+    var terms = subject.disjunctiveTerms();
+    assertEquals(terms.size(), 1);
+    assertEquals(terms.get(0), subject);
+  }
 }
