@@ -45,6 +45,7 @@ public class Or implements BooleanExpression {
   }
 
   public BooleanExpression toDNF() {
+    // DNF(A|B) = DNF(A)|DNF(B)
     return new Or(lhs.toDNF(), rhs.toDNF());
   }
 }

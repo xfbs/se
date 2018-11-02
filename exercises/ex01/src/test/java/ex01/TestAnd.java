@@ -2,12 +2,13 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 import java.util.Map;
 import java.util.HashMap;
-import ex01.And;
-import ex01.Var;
+import ex01.*;
 
 public class TestAnd {
   final Var a = new Var("a");
   final Var b = new Var("b");
+  final Var x = new Var("x");
+  final Var y = new Var("y");
 
   @Test
   public void class_exists() {
@@ -53,5 +54,12 @@ public class TestAnd {
     var terms = subject.disjunctiveTerms();
     assertEquals(terms.size(), 1);
     assertEquals(terms.get(0), subject);
+  }
+
+  @Test
+  public void can_generate_dnf_with_or() {
+    var subject = new And(new Or(a, b), new Or(x, y));
+    var dnf = subject.toDNF();
+    assertTrue(dnf instanceof Or);
   }
 }

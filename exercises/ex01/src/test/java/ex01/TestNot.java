@@ -70,7 +70,6 @@ public class TestNot {
     assertEquals(((Not)dnf.getRightOp()).getOp(), b);
   }
 
-
   @Test
   public void can_generate_dnf_with_and_nested_not() {
     // test DNF(!((!a)&(!b))) == a|b
@@ -85,5 +84,19 @@ public class TestNot {
     assertTrue(right instanceof Var);
     assertEquals(left, this.a);
     assertEquals(right, this.b);
+  }
+
+  @Test
+  public void can_generate_dnf_with_or() {
+    // DNF(!(A|B)) = DNF(!A&!B)
+    var subject = new Not(new Or(a, b));
+    var dnf = subject.toDNF();
+    assertTrue(dnf instanceof And);
+    var left = ((And)dnf).getLeftOp();
+    var right = ((And)dnf).getRightOp();
+    assertTrue(left instanceof Not);
+    assertTrue(right instanceof Not);
+    assertEquals(((Not)left).getOp(), a);
+    assertEquals(((Not)right).getOp(), b);
   }
 }

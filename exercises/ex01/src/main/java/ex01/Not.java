@@ -37,6 +37,12 @@ public class Not implements BooleanExpression {
       return new Or(new Not(and.getLeftOp()), new Not(and.getRightOp())).toDNF();
     }
 
+    // DNF(!(A|B)) = DNF(!A&!B)
+    if(op instanceof Or) {
+      Or op = (Or) this.op;
+      return new And(new Not(op.getLeftOp()), new Not(op.getRightOp())).toDNF();
+    }
+
     throw new IllegalArgumentException("unreconised argument");
   }
 }

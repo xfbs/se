@@ -2,8 +2,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 import java.util.Map;
 import java.util.HashMap;
-import ex01.Or;
-import ex01.Var;
+import ex01.*;
 
 public class TestOr {
   final Var a = new Var("a");
@@ -65,5 +64,21 @@ public class TestOr {
     assertEquals(terms.get(1), b);
     assertEquals(terms.get(2), a);
     assertEquals(terms.get(3), b);
+  }
+
+  @Test
+  public void can_generate_dnf_with_or() {
+    // DNF(!!a|!b) == a|!b
+    var subject = new Or(new Not(new Not(a)), new Not(b));
+    var dnf = subject.toDNF();
+    assertTrue(dnf instanceof Or);
+    var left = ((Or)dnf).getLeftOp();
+    var notright = ((Or)dnf).getRightOp();
+    assertTrue(left instanceof Var);
+    assertEquals(left, a);
+    assertTrue(notright instanceof Not);
+    var right = ((Not)notright).getOp();
+    assertTrue(right instanceof Var);
+    assertEquals(right, b);
   }
 }

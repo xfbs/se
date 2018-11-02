@@ -48,4 +48,12 @@ public class TestVar {
     assertEquals(terms.size(), 1);
     assertEquals(terms.get(0), subject);
   }
+
+  @Test
+  public void can_generate_dnf() {
+    var subject = new Var("a");
+    var dnf = subject.toDNF();
+    assertTrue(dnf instanceof Var);
+    assertEquals(dnf, subject);
+  }
 }
