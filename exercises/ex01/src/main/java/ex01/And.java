@@ -25,4 +25,8 @@ public class And implements BooleanExpression {
   public boolean evaluate(Map<String, Boolean> params) {
     return rhs.evaluate(params) && lhs.evaluate(params);
   }
+
+  public BooleanExpression toDNF() {
+    return this;
+  }
 }

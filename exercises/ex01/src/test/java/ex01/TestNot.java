@@ -2,8 +2,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 import java.util.Map;
 import java.util.HashMap;
-import ex01.Not;
-import ex01.Var;
+import ex01.*;
 
 public class TestNot {
   final Var a = new Var("a");
@@ -43,5 +42,48 @@ public class TestNot {
     var terms = subject.disjunctiveTerms();
     assertEquals(terms.size(), 1);
     assertEquals(terms.get(0), subject);
+  }
+
+  @Test
+  public void can_generate_dnf_with_var() {
+    // test DNF(!a) == !a
+    var subject = new Not(a);
+    assertEquals(subject.toDNF(), subject);
+  }
+
+  @Test
+  public void can_generate_dnf_with_not() {
+    // test DNF(!!a) == a
+    var subject = new Not(new Not(b));
+    assertEquals(subject.toDNF(), b);
+  }
+
+  @Test
+  public void can_generate_dnf_with_and() {
+    // test DNF(!(a&b)) == (!a)|(!b)
+    var subject = new Not(new And(a, b));
+    assertTrue(subject.toDNF() instanceof Or);
+    Or dnf = (Or) subject.toDNF();
+    assertTrue(dnf.getLeftOp() instanceof Not);
+    assertTrue(dnf.getRightOp() instanceof Not);
+    assertEquals(((Not)dnf.getLeftOp()).getOp(), a);
+    assertEquals(((Not)dnf.getRightOp()).getOp(), b);
+  }
+
+
+  @Test
+  public void can_generate_dnf_with_and_nested_not() {
+    // test DNF(!((!a)&(!b))) == a|b
+    var a = new Not(this.a);
+    var b = new Not(this.b);
+    var subject = new Not(new And(a, b));
+    assertTrue(subject.toDNF() instanceof Or);
+    Or dnf = (Or) subject.toDNF();
+    BooleanExpression left = dnf.getLeftOp();
+    BooleanExpression right = dnf.getRightOp();
+    assertTrue(left instanceof Var);
+    assertTrue(right instanceof Var);
+    assertEquals(left, this.a);
+    assertEquals(right, this.b);
   }
 }

@@ -23,4 +23,8 @@ public class Var implements BooleanExpression {
 
     return params.get(name);
   }
+
+  public BooleanExpression toDNF() {
+    return this;
+  }
 }

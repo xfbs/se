@@ -43,4 +43,8 @@ public class Or implements BooleanExpression {
 
     return terms;
   }
+
+  public BooleanExpression toDNF() {
+    return new Or(lhs.toDNF(), rhs.toDNF());
+  }
 }

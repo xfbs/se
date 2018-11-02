@@ -62,4 +62,7 @@ public interface BooleanExpression {
     terms.add(this);
     return terms;
   }
+
+  // converts a boolean expression into the disjunctive normal form.
+  public BooleanExpression toDNF();
 }
