@@ -22,25 +22,14 @@ Die Vorlesung wird *nicht* aufgezeichnet. Es gibt Übungen, die in Teams gelöst
 
 ## Inhalt
 
->   The goal is to enable you to systematically carry out small(er) commercial or open-source software projects.
+*The goal is to enable you to systematically carry out small(er) commercial or open-source software projects.*. What is Software Engineering. Requirements Engineering. Project Management. Waterfall Model. Agile. Risk Management. Testing. Code Coverage. Software Engineering Tools. UML Modelling. Sequence Diagrams. Communication Diagrams. Design Patterns
 
-*   What is Software Engineering
-*   Requirements Engineering
-*   Project Management
-*   Waterfall Model
-*   Agile
-*   Risk Management
-*   Testing
-*   Code Coverage
-*   Software Engineering Tools
-*   UML Modelling
-*   Sequence Diagrams
-*   Communication Diagrams
-*   Design Patterns
+## Folien
 
-## Vorlesungen
-
-*   2018-10-19 Einführung, Folien: [Organisation](folien/WS18-SE-01-Organisation.pdf), [What is Software Engineering](folien/WS18-SE-02-What_is_Software_Engineering.pdf)
+*   [Oragnisation](http://stg-tud.github.io/eise/WS18-SE-01-Organization.pdf).
+*   [What is Software Engineering?](http://stg-tud.github.io/eise/WS18-SE-02-What_is_Software_Engineering.pdf).
+*   [Software Project Management](http://stg-tud.github.io/eise/WS18-SE-03-Software_Project_Management.pdf).
+*   [Software Process Models](http://stg-tud.github.io/eise/WS18-SE-04-Software_Process_Models.pdf).
 
 ## Übungen
 
