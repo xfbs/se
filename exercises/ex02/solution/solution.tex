@@ -1,0 +1,106 @@
+\documentclass[
+  ngerman,
+  DIV=14
+]{scrartcl}
+\usepackage{babel}
+\usepackage{csquotes}
+
+% typography
+\usepackage{fontspec}
+%\usepackage[utopia]{mathdesign}
+\usepackage{newpxmath}
+\setsansfont{Open Sans}[
+  BoldFont={Open Sans Bold},
+  ItalicFont={Open Sans Italic}]
+\setmonofont[Scale=0.87]{Menlo}
+\setmainfont{Palatino}
+\linespread{1.15}
+%\renewcommand\familydefault{\sfdefault}
+\usepackage[factor=1000]{microtype}
+
+% graphics, drawings, etc.
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{shapes.arrows}
+\usetikzlibrary{positioning}
+\usepackage{pgfgantt}
+
+% highlighting, lists, code
+\usepackage{listings}
+\lstset{
+  basicstyle=\ttfamily,
+  %escapeinside=||,
+  keywordstyle=\color{blue!50!black},
+  stringstyle=\color{green!50!black}}
+
+% math
+\usepackage{amsmath}
+\usepackage{siunitx}
+
+% links
+\usepackage[
+  colorlinks,
+  linkcolor={red!50!black},
+  citecolor={blue!50!black},
+  urlcolor={blue!80!black}
+]{hyperref}
+
+\subject{Software Engineering}
+\title{Übung 2: Projektplanung}
+\subtitle{Lösung}
+\author{Patrick Elsen}
+\date{Wintersemester 2018-2019}
+\publishers{Technische Universität Darmstadt}
+
+\begin{document}
+\maketitle
+
+\subsection*{Problem 1: Activity Network / Gantt-Diagramm}
+\emph{Für die Planung eines Softwareprojekts sind folgende Task (mit geschätzter Zeit) vorgesehen. Erstellen Sie entweder ein Activity Network oder ein Gantt-Diagramm, das die Projektplanung darstellt und bestimmen sie den kritischen Pfad.}
+
+%\medskip\noindent
+\begin{figure}[!h]\centering
+\begin{ganttchart}[vgrid,inline,milestone inline label node/.append style={left=5mm}]{1}{20}
+%\gantttitle{2011}{12} \\
+%\gantttitlelist{1,...,20}{1} \\
+\ganttbar{Task 1}{1}{7}\\
+\ganttmilestone{M1}{7}\\
+\ganttbar{Task 2}{1}{15}\\
+\ganttbar{Task 3}{8}{13}\\
+\ganttbar{Task 4}{8}{16}\\
+\ganttmilestone{M2}{16}\\
+\ganttbar{Task 5}{17}{19}\\
+\ganttbar{Task 6}{8}{15}\\
+\ganttmilestone{Release}{19}
+\end{ganttchart}
+\end{figure}
+
+\subsection*{Problem 2: Planning Poker}
+\emph{Im Folgenden finden Sie zwei User Stories. Verwenden Sie in Ihrer Gruppe das in der Vorlesung vorgestellte "Planning Poker" um Story Points zu vergeben. Notieren Sie stichpunktartig, welche Story Points in welcher Runde vergeben wur- den und wie diese begründet wurden.}
+
+\subsection*{Problem 3: Velocity}
+\emph{Implementieren Sie die oben angegebene User Story 1 (benutzen Sie das zur Verfügung gestellte Template, die Implementierung wird bewertet!) und notieren Sie die dafür benötigte Zeit. Berechnen Sie nun die Velocity.}
+\begin{equation*}
+\textit{Velocity} = \frac{\textit{geschätzte Story Points}}{\textit{benötigte Zeit}}  
+\end{equation*}
+\smallskip\noindent
+\emph{Geben Sie die berechnete Velocity an sowie die Zeit, die Sie gemäß dieser Velocity für User Story 2 benötigen werden. Scheint Ihnen diese Zeit realistisch? Wenn nicht, geben Sie eine neue Schätzung für die Story Points für User Story 2 an und begründen Sie die Anpassung kurz.}
+
+\medskip\noindent
+\emph{Implementieren Sie nun User Story 2 (im Template, auch diese Implementierung wird bewertet!) und bestimmen Sie erneut Ihre Velocity. Geben Sie die neue Velocity an. War ihre Schätzung realistisch?}
+
+\subsection*{Problem 4: Iterationsplanung}
+\emph{Berechnen Sie die Velocity der zweiten Iteration.
+Bestimmen Sie anhand dessen die maximal realisierbaren Story Points für die kommende, dritte Iteration. Geben Sie jeweils den vollständigen Rechenweg an.}
+
+\medskip\noindent
+\emph{Wählen Sie unter Berücksichtigung der Kundenpriorität die User Stories für die kommende, dritte Iteration aus. Begründen Sie ihre Auswahl.}
+
+\subsection*{Problem 5: User Story}
+\emph{Der folgende Text ist die Beschreibung eines Features für ein Kartenprogramm durch einen Kunden. Erstellen Sie daraus eine User Story.
+„Nutzer sollen mit unserem Kartenprogramm auch Routen planen können. Wenn der Nutzer auf einen Punkt der Karte doppelt klickt, soll eine grüne Nadel an dieser Stelle erscheinen und der Cursor die Form einer roten Nadel annehmen. Wenn der Nutzer dann noch einmal klickt, wird die rote Nadel platziert und der eingebaute Routingal- gorithmus mit den markierten Orten als Start- und Endpunkt gestartet. Die berechnete Route soll angezeigt werden. Außerdem muss die Länge der Route dargestellt werden. Kann keine Route gefunden werden, muss eine entsprechende Fehlermeldung angezeigt werden.“}
+
+
+\end{document}
