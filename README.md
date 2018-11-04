@@ -38,5 +38,5 @@ Die Vorlesung wird *nicht* aufgezeichnet. Es gibt Übungen, die in Teams gelöst
 
 ## Literatur
 
-*   Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides: *Design Patterns - Elements of Reusable Object-Oriented Software*. Addison- Wesley, 1995. 
+*   Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides: *Design Patterns - Elements of Reusable Object-Oriented Software*. Addison-Wesley, 1995. 
 *   Craig Larman: *Applying UML and Patterns - An Introduction to Object-oriented Analysis and Design*. Prentice Hall.
