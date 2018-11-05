@@ -32,6 +32,18 @@ public class TestOr {
   }
 
   @Test
+  public void can_export_prefix() {
+    var subject = new Or(a, b);
+    assertEquals(subject.toPrefixString(), "| a b");
+  }
+
+  @Test
+  public void can_export_prefix_nested() {
+    var subject = new Or(new Not(a), new Not(b));
+    assertEquals(subject.toPrefixString(), "| ! a ! b");
+  }
+
+  @Test
   public void can_evaluate() {
     Map<String, Boolean> params = new HashMap<>();
     params.put("a", true);

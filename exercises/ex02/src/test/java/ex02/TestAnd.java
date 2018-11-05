@@ -34,6 +34,18 @@ public class TestAnd {
   }
 
   @Test
+  public void can_export_prefix() {
+    var subject = new And(a, b);
+    assertEquals(subject.toPrefixString(), "& a b");
+  }
+
+  @Test
+  public void can_export_prefix_nested() {
+    var subject = new And(new Not(a), new Not(b));
+    assertEquals(subject.toPrefixString(), "& ! a ! b");
+  }
+
+  @Test
   public void can_evaluate() {
     Map<String, Boolean> params = new HashMap<>();
     params.put("a", true);

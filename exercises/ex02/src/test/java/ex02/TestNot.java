@@ -26,6 +26,18 @@ public class TestNot {
   }
 
   @Test
+  public void can_export_prefix() {
+    var subject = new Not(a);
+    assertEquals(subject.toPrefixString(), "! a");
+  }
+
+  @Test
+  public void can_export_prefix_nested() {
+    var subject = new Not(new Not(a));
+    assertEquals(subject.toPrefixString(), "! ! a");
+  }
+
+  @Test
   public void can_evaluate() {
     Map<String, Boolean> params = new HashMap<>();
     params.put("a", true);
