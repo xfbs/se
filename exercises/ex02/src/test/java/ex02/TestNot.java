@@ -50,6 +50,18 @@ public class TestNot {
   }
 
   @Test
+  public void can_export_infix_nested_and() {
+    var subject = new Not(new And(a, b));
+    assertEquals(subject.toInfixString(), "!(a & b)");
+  }
+
+  @Test
+  public void can_export_infix_nested_or() {
+    var subject = new Not(new Or(a, b));
+    assertEquals(subject.toInfixString(), "!(a | b)");
+  }
+
+  @Test
   public void can_evaluate() {
     Map<String, Boolean> params = new HashMap<>();
     params.put("a", true);

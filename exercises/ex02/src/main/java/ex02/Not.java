@@ -25,7 +25,11 @@ public class Not implements BooleanExpression {
 
     @Override
     public String toInfixString() {
-        return String.format("!%s", op.toInfixString());
+        if(op.isAnd() || op.isOr()) {
+            return String.format("!(%s)", op.toInfixString());
+        } else {
+            return String.format("!%s", op.toInfixString());
+        }
     }
 
     @Override
