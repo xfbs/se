@@ -29,6 +29,12 @@ public class TestVar {
   }
 
   @Test
+  public void can_export_infix() {
+    var subject = new Var("abc");
+    assertEquals(subject.toInfixString(), "abc");
+  }
+
+  @Test
   public void can_evaluate() {
     Map<String, Boolean> params = new HashMap<>();
     params.put("x", true);
