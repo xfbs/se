@@ -26,6 +26,11 @@ public class Or implements BooleanExpression {
     }
 
     @Override
+    public String toPrefixString() {
+        return String.format("| %s %s", leftOp.toPrefixString(), rightOp.toPrefixString());
+    }
+
+    @Override
     public boolean evaluate(Map<String, Boolean> argumentMap) {
         return leftOp.evaluate(argumentMap) | rightOp.evaluate(argumentMap);
     }

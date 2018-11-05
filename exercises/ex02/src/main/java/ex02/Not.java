@@ -19,6 +19,11 @@ public class Not implements BooleanExpression {
     }
 
     @Override
+    public String toPrefixString() {
+        return String.format("! %s", op.toPrefixString());
+    }
+
+    @Override
     public boolean evaluate(Map<String, Boolean> argumentMap) {
         return !op.evaluate(argumentMap);
     }

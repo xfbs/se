@@ -19,6 +19,11 @@ public class Var implements BooleanExpression {
     }
 
     @Override
+    public String toPrefixString() {
+        return name;
+    }
+
+    @Override
     public boolean evaluate(Map<String, Boolean> argumentMap) {
         return argumentMap.get(name);
     }
