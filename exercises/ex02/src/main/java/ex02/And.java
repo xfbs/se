@@ -33,7 +33,18 @@ public class And implements BooleanExpression {
 
     @Override
     public String toInfixString() {
-        return String.format("%s & %s", leftOp.toInfixString(), rightOp.toInfixString());
+        String left = leftOp.toInfixString();
+        String right = rightOp.toInfixString();
+
+        if(leftOp.isOr()) {
+            left = String.format("(%s)", left);
+        }
+
+        if(rightOp.isOr()) {
+            right = String.format("(%s)", right);
+        }
+
+        return String.format("%s & %s", left, right);
     }
 
     @Override

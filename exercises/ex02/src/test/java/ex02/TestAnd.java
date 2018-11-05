@@ -7,6 +7,7 @@ import ex02.*;
 public class TestAnd {
   final Var a = new Var("a");
   final Var b = new Var("b");
+  final Var c = new Var("c");
   final Var x = new Var("x");
   final Var y = new Var("y");
 
@@ -43,6 +44,30 @@ public class TestAnd {
   public void can_export_prefix_nested() {
     var subject = new And(new Not(a), new Not(b));
     assertEquals(subject.toPrefixString(), "& ! a ! b");
+  }
+
+  @Test
+  public void can_export_infix() {
+    var subject = new And(a, b);
+    assertEquals(subject.toInfixString(), "a & b");
+  }
+
+  @Test
+  public void can_export_infix_nested_and() {
+    var subject = new And(a, new And(b, c));
+    assertEquals(subject.toInfixString(), "a & b & c");
+  }
+
+  @Test
+  public void can_export_infix_nested_or() {
+    var subject = new And(a, new Or(b, c));
+    assertEquals(subject.toInfixString(), "a & (b | c)");
+  }
+
+  @Test
+  public void can_export_infix_nested_not() {
+    var subject = new And(a, new Not(b));
+    assertEquals(subject.toInfixString(), "a & !b");
   }
 
   @Test

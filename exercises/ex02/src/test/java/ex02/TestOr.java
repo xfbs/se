@@ -7,6 +7,7 @@ import ex02.*;
 public class TestOr {
   final Var a = new Var("a");
   final Var b = new Var("b");
+  final Var c = new Var("c");
 
   @Test
   public void class_exists() {
@@ -41,6 +42,30 @@ public class TestOr {
   public void can_export_prefix_nested() {
     var subject = new Or(new Not(a), new Not(b));
     assertEquals(subject.toPrefixString(), "| ! a ! b");
+  }
+
+  @Test
+  public void can_export_infix() {
+    var subject = new Or(a, b);
+    assertEquals(subject.toInfixString(), "a | b");
+  }
+
+  @Test
+  public void can_export_infix_nested_or() {
+    var subject = new Or(a, new Or(b, c));
+    assertEquals(subject.toInfixString(), "a | b | c");
+  }
+
+  @Test
+  public void can_export_infix_nested_and() {
+    var subject = new Or(a, new And(b, c));
+    assertEquals(subject.toInfixString(), "a | b & c");
+  }
+
+  @Test
+  public void can_export_infix_nested_not() {
+    var subject = new Or(a, new Not(b));
+    assertEquals(subject.toInfixString(), "a | !b");
   }
 
   @Test
