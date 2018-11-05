@@ -62,23 +62,30 @@
 
 %\medskip\noindent
 \begin{figure}[!h]\centering
-\begin{ganttchart}[vgrid,inline,milestone inline label node/.append style={left=5mm}]{1}{20}
+\begin{ganttchart}[vgrid,inline,milestone inline label node/.append style={below},bar inline label anchor=west,bar inline label node/.style={anchor=west,text width=2cm}]{1}{20}
 %\gantttitle{2011}{12} \\
 %\gantttitlelist{1,...,20}{1} \\
-\ganttbar{Task 1}{1}{7}\\
-\ganttmilestone{M1}{7}\\
+
+\ganttmilestone{}{7}
+\ganttmilestone{}{16}
+\ganttmilestone{}{19}\\
+\ganttbar[bar/.style={thick,fill=red!70!black}]{\color{white}Task 1}{1}{7}\\
 \ganttbar{Task 2}{1}{15}\\
 \ganttbar{Task 3}{8}{13}\\
-\ganttbar{Task 4}{8}{16}\\
-\ganttmilestone{M2}{16}\\
-\ganttbar{Task 5}{17}{19}\\
-\ganttbar{Task 6}{8}{15}\\
-\ganttmilestone{Release}{19}
+\ganttbar[bar/.style={thick,fill=red!70!black}]{\color{white}Task 4}{8}{16}\\
+\ganttbar[bar/.style={thick,fill=red!70!black}]{\color{white}Task 5}{17}{19}\\
+\ganttbar{Task 6}{8}{15}
+\ganttvrule{M1}{7}
+\ganttvrule{M2}{16}
+\ganttvrule{Release}{19}
 \end{ganttchart}
 \end{figure}
 
 \subsection*{Problem 2: Planning Poker}
-\emph{Im Folgenden finden Sie zwei User Stories. Verwenden Sie in Ihrer Gruppe das in der Vorlesung vorgestellte "Planning Poker" um Story Points zu vergeben. Notieren Sie stichpunktartig, welche Story Points in welcher Runde vergeben wur- den und wie diese begründet wurden.}
+\emph{Im Folgenden finden Sie zwei User Stories. Verwenden Sie in Ihrer Gruppe das in der Vorlesung vorgestellte \enquote{Planning Poker} um Story Points zu vergeben. Notieren Sie stichpunktartig, welche Story Points in welcher Runde vergeben wur- den und wie diese begründet wurden.}
+
+\medskip\noindent
+Der Ausgabe in Präfixnotation haben wir eine Story Point gegeben. Dies sollte eine sehr leichte Implementation sein. Der Ausgabe als Infixnotation haben wir drei Story Points gegeben, weil wir uns unsicher sind, wie viel Aufwand dafür benötigt wird, und weil wir mit Operatorpräzedenzen hantieren müssen.
 
 \subsection*{Problem 3: Velocity}
 \emph{Implementieren Sie die oben angegebene User Story 1 (benutzen Sie das zur Verfügung gestellte Template, die Implementierung wird bewertet!) und notieren Sie die dafür benötigte Zeit. Berechnen Sie nun die Velocity.}
