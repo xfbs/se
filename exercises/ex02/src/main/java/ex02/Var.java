@@ -24,6 +24,11 @@ public class Var implements BooleanExpression {
     }
 
     @Override
+    public String toInfixString() {
+        return name;
+    }
+
+    @Override
     public boolean evaluate(Map<String, Boolean> argumentMap) {
         if(!argumentMap.containsKey(name)) {
           throw new IllegalArgumentException("value must be in parameter list.");

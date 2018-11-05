@@ -89,7 +89,7 @@ public interface BooleanExpression {
     String toPrefixString();
 
     // TODO Problem 3b) Implementieren Sie die folgende Methode in And/Or/Not/Var
-    //String toInfixString();
+    String toInfixString();
 
     boolean evaluate(Map<String, Boolean> argumentMap);
 

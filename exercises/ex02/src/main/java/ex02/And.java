@@ -32,6 +32,11 @@ public class And implements BooleanExpression {
     }
 
     @Override
+    public String toInfixString() {
+        return String.format("%s & %s", leftOp.toInfixString(), rightOp.toInfixString());
+    }
+
+    @Override
     public boolean evaluate(Map<String, Boolean> argumentMap) {
         return leftOp.evaluate(argumentMap) & rightOp.evaluate(argumentMap);
     }

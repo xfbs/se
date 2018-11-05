@@ -24,6 +24,11 @@ public class Not implements BooleanExpression {
     }
 
     @Override
+    public String toInfixString() {
+        return String.format("!%s", op.toInfixString());
+    }
+
+    @Override
     public boolean evaluate(Map<String, Boolean> argumentMap) {
         return !op.evaluate(argumentMap);
     }
