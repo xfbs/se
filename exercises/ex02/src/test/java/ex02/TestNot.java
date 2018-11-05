@@ -38,6 +38,18 @@ public class TestNot {
   }
 
   @Test
+  public void can_export_infix() {
+    var subject = new Not(a);
+    assertEquals(subject.toInfixString(), "!a");
+  }
+
+  @Test
+  public void can_export_infix_nested_not() {
+    var subject = new Not(new Not(a));
+    assertEquals(subject.toInfixString(), "!!a");
+  }
+
+  @Test
   public void can_evaluate() {
     Map<String, Boolean> params = new HashMap<>();
     params.put("a", true);
