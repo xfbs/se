@@ -25,6 +25,10 @@ public class Var implements BooleanExpression {
 
     @Override
     public boolean evaluate(Map<String, Boolean> argumentMap) {
+        if(!argumentMap.containsKey(name)) {
+          throw new IllegalArgumentException("value must be in parameter list.");
+        }
+
         return argumentMap.get(name);
     }
 
