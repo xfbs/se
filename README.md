@@ -9,7 +9,7 @@
 *   Betreuuer: Dominik Helm
 *   Vorlesung: Freitags 13:30–15:00 in S1|01 A01 und S1|01 A03.
 *   Prüfungsart: Klausur, Datum unbekannt.
-*   Links: [Moodle](https://moodle.informatik.tu-darmstadt.de/course/view.php?id=446), [Veranstaltungswebseite](http://stg-tud.github.io/eise/), [Exercises](https://moodle.informatik.tu-darmstadt.de/mod/url/view.php?id=15995) (nur im TU-Netz oder per VPN erreichbar).
+*   Links: [Moodle](https://moodle.informatik.tu-darmstadt.de/course/view.php?id=446), [Veranstaltungswebseite](http://stg-tud.github.io/eise/), [Exercises](https://submission.st.informatik.tu-darmstadt.de/course/se18) (nur im TU-Netz oder per VPN erreichbar).
 *   Notizen zur Vorlesung: [PDF](notizen.pdf) (*work-in-progress*).
 
 Die Vorlesung wird *nicht* aufgezeichnet. Es gibt Übungen, die in Teams gelöst werden sollen. Diese können, bei Bestehen der Klausur, zu einer Notenverbesserung (Bonus) führen. 
