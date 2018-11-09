@@ -29,6 +29,7 @@
 
 % highlighting, lists, code
 \usepackage{listings}
+\usepackage{booktabs}
 \usepackage{soul}
 \lstset{
   basicstyle=\ttfamily,
@@ -120,13 +121,22 @@ In der zweite Iteration hat 14 Tage gedauert, und es wurden insgesamt 25 \enquot
 \emph{Wählen Sie unter Berücksichtigung der Kundenpriorität die User Stories für die kommende, dritte Iteration aus. Begründen Sie ihre Auswahl.}
 
 \medskip\noindent
-In der nächsten Iteration sollte an US 16, 19 und 20 gearbeitet werden, da diese die höchsten Prioritäten haben. \hl{TODO}.
+In der nächsten Iteration sollte an US 16, 19 und 20 gearbeitet werden, da diese die höchsten Prioritäten haben.
 
 \subsection*{Problem 5: User Story}
 \emph{Der folgende Text ist die Beschreibung eines Features für ein Kartenprogramm durch einen Kunden. Erstellen Sie daraus eine User Story.
 „Nutzer sollen mit unserem Kartenprogramm auch Routen planen können. Wenn der Nutzer auf einen Punkt der Karte doppelt klickt, soll eine grüne Nadel an dieser Stelle erscheinen und der Cursor die Form einer roten Nadel annehmen. Wenn der Nutzer dann noch einmal klickt, wird die rote Nadel platziert und der eingebaute Routingal- gorithmus mit den markierten Orten als Start- und Endpunkt gestartet. Die berechnete Route soll angezeigt werden. Außerdem muss die Länge der Route dargestellt werden. Kann keine Route gefunden werden, muss eine entsprechende Fehlermeldung angezeigt werden.“}
 
-\medskip\noindent
-\hl{TODO}.
+\medskip
+\begin{table}[!h]\centering
+\begin{tabular}{@{}rp{11cm}@{}}
+%\toprule
+\small\bfseries\sffamily\caps{TITEL} & Routenplanung\\
+\small\bfseries\sffamily\caps{BESCHREIBUNG} & Nutzer sollen mit unserem Kartenprogramm auch Routen planen können.\\
+\small\bfseries\sffamily\caps{AKZEPTANZKRITERIUM} & Wenn der Nutzer auf einen Punkt der Karte doppelt klickt, soll eine grüne Nadel an dieser Stelle erscheinen und der Cursor die Form einer roten Nadel annehmen. Wenn der Nutzer dann noch einmal klickt, wird die rote Nadel platziert und der eingebaute Routingal- gorithmus mit den markierten Orten als Start- und Endpunkt gestartet. Die berechnete Route soll angezeigt werden. Außerdem muss die Länge der Route dargestellt werden. Kann keine Route gefunden werden, muss eine entsprechende Fehlermeldung angezeigt werden.\\
+%\bottomrule
+\end{tabular}
+\end{table}
+
 
 \end{document}
