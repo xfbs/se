@@ -1,0 +1,142 @@
+\documentclass[
+  ngerman,
+  DIV=14
+]{scrartcl}
+\usepackage{babel}
+\usepackage{csquotes}
+
+% typography
+\usepackage{fontspec}
+%\usepackage[utopia]{mathdesign}
+\usepackage{newpxmath}
+\setsansfont{Open Sans}[
+  BoldFont={Open Sans Bold},
+  ItalicFont={Open Sans Italic}]
+\setmonofont[Scale=0.87]{Menlo}
+\setmainfont{Palatino}
+\linespread{1.15}
+%\renewcommand\familydefault{\sfdefault}
+\usepackage[factor=1000]{microtype}
+
+% graphics, drawings, etc.
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{shapes.arrows}
+\usetikzlibrary{positioning}
+\usepackage{pgfgantt}
+
+% highlighting, lists, code
+\usepackage{listings}
+\usepackage{booktabs}
+\usepackage{soul}
+\lstset{
+  basicstyle=\ttfamily,
+  %escapeinside=||,
+  keywordstyle=\color{blue!50!black},
+  stringstyle=\color{green!50!black}}
+
+% math
+\usepackage{amsmath}
+\usepackage{siunitx}
+
+% links
+\usepackage[
+  colorlinks,
+  linkcolor={red!50!black},
+  citecolor={blue!50!black},
+  urlcolor={blue!80!black}
+]{hyperref}
+
+\subject{Software Engineering}
+\title{Übung 2: Projektplanung}
+\subtitle{Lösung}
+\author{Patrick Elsen}
+\date{Wintersemester 2018-2019}
+\publishers{Technische Universität Darmstadt}
+
+\begin{document}
+\maketitle
+
+\subsection*{Problem 1: Activity Network / Gantt-Diagramm}
+\emph{Für die Planung eines Softwareprojekts sind folgende Task (mit geschätzter Zeit) vorgesehen. Erstellen Sie entweder ein Activity Network oder ein Gantt-Diagramm, das die Projektplanung darstellt und bestimmen sie den kritischen Pfad.}
+
+%\medskip\noindent
+\begin{figure}[!h]\centering
+\begin{ganttchart}[vgrid,inline,milestone inline label node/.append style={below},bar inline label anchor=west,bar inline label node/.style={anchor=west,text width=2cm}]{1}{20}
+%\gantttitle{2011}{12} \\
+%\gantttitlelist{1,...,20}{1} \\
+
+\ganttmilestone{}{7}
+\ganttmilestone{}{16}
+\ganttmilestone{}{19}\\
+\ganttbar[bar/.style={thick,fill=red!70!black}]{\color{white}Task 1}{1}{7}\\
+\ganttbar{Task 2}{1}{15}\\
+\ganttbar{Task 3}{8}{13}\\
+\ganttbar[bar/.style={thick,fill=red!70!black}]{\color{white}Task 4}{8}{16}\\
+\ganttbar[bar/.style={thick,fill=red!70!black}]{\color{white}Task 5}{17}{19}\\
+\ganttbar{Task 6}{8}{15}
+\ganttvrule{M1}{7}
+\ganttvrule{M2}{16}
+\ganttvrule{Release}{19}
+\end{ganttchart}
+\end{figure}
+
+\subsection*{Problem 2: Planning Poker}
+\emph{Im Folgenden finden Sie zwei User Stories. Verwenden Sie in Ihrer Gruppe das in der Vorlesung vorgestellte \enquote{Planning Poker} um Story Points zu vergeben. Notieren Sie stichpunktartig, welche Story Points in welcher Runde vergeben wur- den und wie diese begründet wurden.}
+
+\medskip\noindent
+Der Ausgabe in Präfixnotation haben wir eine Story Point gegeben. Dies sollte eine sehr leichte Implementation sein. Der Ausgabe als Infixnotation haben wir drei Story Points gegeben, weil wir uns unsicher sind, wie viel Aufwand dafür benötigt wird, und weil wir mit Operatorpräzedenzen hantieren müssen.
+
+\subsection*{Problem 3: Velocity}
+\emph{Implementieren Sie die oben angegebene User Story 1 (benutzen Sie das zur Verfügung gestellte Template, die Implementierung wird bewertet!) und notieren Sie die dafür benötigte Zeit. Berechnen Sie nun die Velocity.}
+\begin{equation*}
+\textit{Velocity} = \frac{\textit{geschätzte Story Points}}{\textit{benötigte Zeit}}  
+\end{equation*}
+
+\medskip\noindent
+\emph{Geben Sie die berechnete Velocity an sowie die Zeit, die Sie gemäß dieser Velocity für User Story 2 benötigen werden. Scheint Ihnen diese Zeit realistisch? Wenn nicht, geben Sie eine neue Schätzung für die Story Points für User Story 2 an und begründen Sie die Anpassung kurz.}
+
+\medskip\noindent
+Ich habe ca.\ 10 Minuten gebraucht, um die Funktionalität zu implementieren. Also habe ich eine Velocity von \SI{6}{sp\per\hour}. Ich konnte alles größtenteils von der Implementation von \texttt{toPostfixString()} kopieren. Ich war sehr schockiert, dass uns keine Tests für die vorgegebenen Methoden geliefert wurden, also habe ich meine Tests von der vorherigen Abgabe kopiert. Dabei habe ich gemerkt, dass ich eine andere Operatorenreihenfolge in meiner Abgabe benutzt hatte als in dieser, also musste ich einige Tests anpassen. Ich denke, dass ich für die Funktionalität von \emph{User Story 2} etwas mehr Zeit brauche, da ich nicht einfach Code kopieren kann, sondern eigene Logik implementieren muss. 
+
+\bigskip\noindent
+\emph{Implementieren Sie nun User Story 2 (im Template, auch diese Implementierung wird bewertet!) und bestimmen Sie erneut Ihre Velocity. Geben Sie die neue Velocity an. War ihre Schätzung realistisch?}
+
+\medskip\noindent
+Wie zu erwarten, habe ich mehr Zeit gebraucht, um \enquote{User Story 2} zu implementieren. Es hat insgesamt ca.\ 30 Minuten gedauert. Ich habe also immer noch eine Velocity von \SI{6}{sp\per\hour}. 
+
+\subsection*{Problem 4: Iterationsplanung}
+\emph{Berechnen Sie die Velocity der zweiten Iteration. Bestimmen Sie anhand dessen die maximal realisierbaren Story Points für die kommende, dritte Iteration. Geben Sie jeweils den vollständigen Rechenweg an.}
+
+\medskip\noindent
+In der zweite Iteration hat 14 Tage gedauert, und es wurden insgesamt 25 \enquote{Story Points} erledigt. Deswegen ist die Velocity ungefähr $2$.
+
+\begin{equation*}
+\frac{25}{14} = 1,786  
+\end{equation*}
+
+\bigskip\noindent
+\emph{Wählen Sie unter Berücksichtigung der Kundenpriorität die User Stories für die kommende, dritte Iteration aus. Begründen Sie ihre Auswahl.}
+
+\medskip\noindent
+In der nächsten Iteration sollte an US 16, 19 und 20 gearbeitet werden, da diese die höchsten Prioritäten haben.
+
+\subsection*{Problem 5: User Story}
+\emph{Der folgende Text ist die Beschreibung eines Features für ein Kartenprogramm durch einen Kunden. Erstellen Sie daraus eine User Story.
+„Nutzer sollen mit unserem Kartenprogramm auch Routen planen können. Wenn der Nutzer auf einen Punkt der Karte doppelt klickt, soll eine grüne Nadel an dieser Stelle erscheinen und der Cursor die Form einer roten Nadel annehmen. Wenn der Nutzer dann noch einmal klickt, wird die rote Nadel platziert und der eingebaute Routingal- gorithmus mit den markierten Orten als Start- und Endpunkt gestartet. Die berechnete Route soll angezeigt werden. Außerdem muss die Länge der Route dargestellt werden. Kann keine Route gefunden werden, muss eine entsprechende Fehlermeldung angezeigt werden.“}
+
+\medskip
+\begin{table}[!h]\centering
+\begin{tabular}{@{}rp{11cm}@{}}
+%\toprule
+\small\bfseries\sffamily\caps{TITEL} & Routenplanung\\
+\small\bfseries\sffamily\caps{BESCHREIBUNG} & Nutzer sollen mit unserem Kartenprogramm auch Routen planen können.\\
+\small\bfseries\sffamily\caps{AKZEPTANZKRITERIUM} & Wenn der Nutzer auf einen Punkt der Karte doppelt klickt, soll eine grüne Nadel an dieser Stelle erscheinen und der Cursor die Form einer roten Nadel annehmen. Wenn der Nutzer dann noch einmal klickt, wird die rote Nadel platziert und der eingebaute Routingal- gorithmus mit den markierten Orten als Start- und Endpunkt gestartet. Die berechnete Route soll angezeigt werden. Außerdem muss die Länge der Route dargestellt werden. Kann keine Route gefunden werden, muss eine entsprechende Fehlermeldung angezeigt werden.\\
+%\bottomrule
+\end{tabular}
+\end{table}
+
+
+\end{document}
