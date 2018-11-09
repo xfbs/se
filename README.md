@@ -26,7 +26,7 @@ Die Vorlesung wird *nicht* aufgezeichnet. Es gibt Übungen, die in Teams gelöst
 
 ## Folien
 
-*   [Oragnisation](http://stg-tud.github.io/eise/WS18-SE-01-Organization.pdf).
+*   [Organisation](http://stg-tud.github.io/eise/WS18-SE-01-Organization.pdf).
 *   [What is Software Engineering?](http://stg-tud.github.io/eise/WS18-SE-02-What_is_Software_Engineering.pdf).
 *   [Software Project Management](http://stg-tud.github.io/eise/WS18-SE-03-Software_Project_Management.pdf).
 *   [Software Process Models](http://stg-tud.github.io/eise/WS18-SE-04-Software_Process_Models.pdf).
