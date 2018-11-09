@@ -33,8 +33,8 @@ Die Vorlesung wird *nicht* aufgezeichnet. Es gibt Übungen, die in Teams gelöst
 
 ## Übungen
 
-*   Grundlagen (26.10.2018 – 02.11.2018): [Handout](https://submission.st.informatik.tu-darmstadt.de/course/se18/handouts/1), [Template](https://submission.st.informatik.tu-darmstadt.de/course/se18/templates/1), [Solution](https://submission.st.informatik.tu-darmstadt.de/course/se18/solution/1), [My Submission](exercises/ex01).
-*   Projektplanung (02.11.2018 – 09.11.2018): [Handout](https://submission.st.informatik.tu-darmstadt.de/course/se18/handouts/2), [Template](https://submission.st.informatik.tu-darmstadt.de/course/se18/templates/2). [My Submission](https://github.com/xfbs/se/blob/master/exercises/ex02/solution/solution.pdf).
+[X] Grundlagen (26.10.2018 – 02.11.2018): [Handout](https://submission.st.informatik.tu-darmstadt.de/course/se18/handouts/1), [Template](https://submission.st.informatik.tu-darmstadt.de/course/se18/templates/1), [Solution](https://submission.st.informatik.tu-darmstadt.de/course/se18/solution/1), [My Submission](exercises/ex01).
+[X] Projektplanung (02.11.2018 – 09.11.2018): [Handout](https://submission.st.informatik.tu-darmstadt.de/course/se18/handouts/2), [Template](https://submission.st.informatik.tu-darmstadt.de/course/se18/templates/2). [My Submission](https://github.com/xfbs/se/blob/master/exercises/ex02/solution/solution.pdf).
 
 ## Literatur
 
