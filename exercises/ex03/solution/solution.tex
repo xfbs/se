@@ -144,7 +144,57 @@ Möchte man dennoch sicher sein, dass eine reibungslose Kommunikation zwischen u
 \medskip\noindent
 \emph{Klassifizieren Sie die Anforderungen aus Problem 2 gemäß der Taxonomie.}
 
+\begin{table}[!h]\centering\tablespacing{1.3}
+\begin{tabular}{@{}p{7cm}p{5.5cm}@{}}
+\toprule
+\caps{ANFORDERUNG} & \caps{TAXONOMIE}\\
+\midrule
+\emph{Es darf nicht möglich sein, Kommentare mit beleidigendem Inhalt zu veröffentlichen.} & Ethical requirements\\
+\emph{Der Quellcode muss die Java Coding Conventions einhalten.} & Standards requirements\\
+\emph{Die Anwendung muss unter Arch Linux lauffähig sein.} & Interoperatibility requirements\\
+\emph{Die Benutzeroberfläche zur Routenplanung muss intuitiv benutzbar sein.} & Usability requirements\\
+\bottomrule
+\end{tabular}
+\end{table}
+
 \bigskip\noindent
 \emph{Geben Sie für jede Kategorie der dritten Ebene der Taxonomie (also bspw. Efficiency Requirements, Delivery Requirements) jeweils eine überprüfbare nicht-funktionale Anforderung an. Der Kontext sei der einer Applikation für (Straßen)Karten und Routenplanung. Für die bereits in Teilaufgabe a) verwendeten Kategorien müssen Sie keine weitere Anforderung angeben.}
+
+\begin{table}[!h]\centering\tablespacing{1.3}
+\caption{Product Requirements}
+\begin{tabular}{@{}p{5.5cm}p{5.5cm}@{}}
+\toprule
+\caps{TAXONOMIE} & \caps{ANFORDERUNG}\\
+\midrule
+Portability requirements & Die Applikation sollte zwischen verschiedenen Smartphones portabel sein. \\
+Reliability requirements & Die Applikation sollte bei nicht mehr als 0,1\% der Anfragen abstürzen.\\
+Efficiency requirements & Die Applikation sollte nicht mehr als 500 MB RAM verbrauchen während Sie in Betrieb ist.\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[!h]\centering\tablespacing{1.3}
+\caption{Organisational Requirements}
+\begin{tabular}{@{}p{5.5cm}p{5.5cm}@{}}
+\toprule
+\caps{TAXONOMIE} & \caps{ANFORDERUNG}\\
+\midrule
+Delivery Requirements & Die App muss als Java \texttt{.jar} und als Apple \texttt{.app}-Datei ausgeliefert werden.\\
+Implementation Requirements & Die iOS-Variante der Applikation sollte in Swift implementiert sein.\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[!h]\centering\tablespacing{1.3}
+\caption{Interoperatibility Requirements}
+\begin{tabular}{@{}p{5.5cm}p{5.5cm}@{}}
+\toprule
+\caps{TAXONOMIE} & \caps{ANFORDERUNG}\\
+\midrule
+Interoperatibility Requirements & Die iOS- und Androidversionen der App sollten untereinander kompatibel sein, so dass User sich gegenseitig Koordinaten schicken können.\\
+Legislative Requirements & Die NSA und der BND müssen eine Schnittstelle haben, mit denen sie alle persönlichen Daten aller Benutzer mitlesen können.\\
+\bottomrule
+\end{tabular}
+\end{table}
 
 \end{document}
