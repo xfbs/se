@@ -22,7 +22,7 @@ Die Vorlesung wird *nicht* aufgezeichnet. Es gibt Übungen, die in Teams gelöst
 
 ## Inhalt
 
-*The goal is to enable you to systematically carry out small(er) commercial or open-source software projects.*. What is Software Engineering. Requirements Engineering. Project Management. Waterfall Model. Agile. Risk Management. Testing. Code Coverage. Software Engineering Tools. UML Modelling. Sequence Diagrams. Communication Diagrams. Design Patterns
+The goal is to enable you to systematically carry out small(er) commercial or open-source software projects. What is Software Engineering. Requirements Engineering. Project Management. Waterfall Model. Agile. Risk Management. Testing. Code Coverage. Software Engineering Tools. UML Modelling. Sequence Diagrams. Communication Diagrams. Design Patterns. 
 
 ## Folien
 
@@ -33,9 +33,11 @@ Die Vorlesung wird *nicht* aufgezeichnet. Es gibt Übungen, die in Teams gelöst
 
 ## Übungen
 
-- [X] Grundlagen (26.10.2018 – 02.11.2018): [Handout](https://submission.st.informatik.tu-darmstadt.de/course/se18/handouts/1), [Template](https://submission.st.informatik.tu-darmstadt.de/course/se18/templates/1), [Solution](https://submission.st.informatik.tu-darmstadt.de/course/se18/solution/1), [My Submission](exercises/ex01).
-- [X] Projektplanung (02.11.2018 – 09.11.2018): [Handout](https://submission.st.informatik.tu-darmstadt.de/course/se18/handouts/2), [Template](https://submission.st.informatik.tu-darmstadt.de/course/se18/templates/2). [My Submission](https://github.com/xfbs/se/blob/master/exercises/ex02/solution/solution.pdf).
-- [ ] Anforderungsanalyse (16.11.2018 um 13:00): [Handout](https://submission.st.informatik.tu-darmstadt.de/course/se18/handouts/3), [Template](https://submission.st.informatik.tu-darmstadt.de/course/se18/templates/3).
+- [X] Exercise 1: Grundlagen (Abgabe 02.11.2018): [Handout](https://submission.st.informatik.tu-darmstadt.de/course/se18/handouts/1), [Template](https://submission.st.informatik.tu-darmstadt.de/course/se18/templates/1), [Solution](https://submission.st.informatik.tu-darmstadt.de/course/se18/solution/1)
+    - [X] [Abgabe](exercises/ex01). *Not Graded*.
+- [X] Exercise 2: Projektplanung (Abgabe 09.11.2018): [Handout](https://submission.st.informatik.tu-darmstadt.de/course/se18/handouts/2), [Template](https://submission.st.informatik.tu-darmstadt.de/course/se18/templates/2).
+    - [X] [Abgabe](https://github.com/xfbs/se/blob/master/exercises/ex02/solution/solution.pdf). *Not Graded*.
+- [ ] Exercise 3: Anforderungsanalyse (Abgabe 16.11.2018): [Handout](https://submission.st.informatik.tu-darmstadt.de/course/se18/handouts/3), [Template](https://submission.st.informatik.tu-darmstadt.de/course/se18/templates/3).
 
 ## Literatur
 
