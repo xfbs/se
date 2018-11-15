@@ -22,20 +22,35 @@ Die Vorlesung wird *nicht* aufgezeichnet. Es gibt Übungen, die in Teams gelöst
 
 ## Inhalt
 
-*The goal is to enable you to systematically carry out small(er) commercial or open-source software projects.*. What is Software Engineering. Requirements Engineering. Project Management. Waterfall Model. Agile. Risk Management. Testing. Code Coverage. Software Engineering Tools. UML Modelling. Sequence Diagrams. Communication Diagrams. Design Patterns
+The goal is to enable you to systematically carry out small(er) commercial or open-source software projects. What is Software Engineering. Requirements Engineering. Project Management. Waterfall Model. Agile. Risk Management. Testing. Code Coverage. Software Engineering Tools. UML Modelling. Sequence Diagrams. Communication Diagrams. Design Patterns. 
 
 ## Folien
 
-*   [Organisation](http://stg-tud.github.io/eise/WS18-SE-01-Organization.pdf).
-*   [What is Software Engineering?](http://stg-tud.github.io/eise/WS18-SE-02-What_is_Software_Engineering.pdf).
-*   [Software Project Management](http://stg-tud.github.io/eise/WS18-SE-03-Software_Project_Management.pdf).
-*   [Software Process Models](http://stg-tud.github.io/eise/WS18-SE-04-Software_Process_Models.pdf).
+*   [Organisation](http://stg-tud.github.io/eise/WS18-SE-01-Organization.pdf)
+*   [What is Software Engineering?](http://stg-tud.github.io/eise/WS18-SE-02-What_is_Software_Engineering.pdf)
+*   [Software Project Management](http://stg-tud.github.io/eise/WS18-SE-03-Software_Project_Management.pdf)
+*   [Software Process Models](http://stg-tud.github.io/eise/WS18-SE-04-Software_Process_Models.pdf)
+*   [Requirements Engineering](http://stg-tud.github.io/eise/WS18-SE-05-Requirements_Engineering.pdf)
+*   [Requirements Engineering - Use Cases](http://stg-tud.github.io/eise/WS18-SE-06-Requirements_Engineering-Use_Cases.pdf)
+*   [Modelling - Domain Model](http://stg-tud.github.io/eise/WS18-SE-07-Modeling-static_Part.pdf)
+*   [Dynamic Modelling](http://stg-tud.github.io/eise/WS18-SE-08-Modeling-dynamic_Part.pdf)
 
 ## Übungen
 
-- [X] Grundlagen (26.10.2018 – 02.11.2018): [Handout](https://submission.st.informatik.tu-darmstadt.de/course/se18/handouts/1), [Template](https://submission.st.informatik.tu-darmstadt.de/course/se18/templates/1), [Solution](https://submission.st.informatik.tu-darmstadt.de/course/se18/solution/1), [My Submission](exercises/ex01).
-- [X] Projektplanung (02.11.2018 – 09.11.2018): [Handout](https://submission.st.informatik.tu-darmstadt.de/course/se18/handouts/2), [Template](https://submission.st.informatik.tu-darmstadt.de/course/se18/templates/2). [My Submission](https://github.com/xfbs/se/blob/master/exercises/ex02/solution/solution.pdf).
-- [ ] Anforderungsanalyse (16.11.2018 um 13:00): [Handout](https://submission.st.informatik.tu-darmstadt.de/course/se18/handouts/3), [Template](https://submission.st.informatik.tu-darmstadt.de/course/se18/templates/3).
+- [X] Exercise 1: Grundlagen (Abgabe 02.11.2018): [Handout](https://submission.st.informatik.tu-darmstadt.de/course/se18/handouts/1), [Template](https://submission.st.informatik.tu-darmstadt.de/course/se18/templates/1), [Solution](https://submission.st.informatik.tu-darmstadt.de/course/se18/solution/1)
+    - [X] [Abgabe](exercises/ex01). *Not Graded*.
+- [X] Exercise 2: Projektplanung (Abgabe 09.11.2018): [Handout](https://submission.st.informatik.tu-darmstadt.de/course/se18/handouts/2), [Template](https://submission.st.informatik.tu-darmstadt.de/course/se18/templates/2). [Solution](https://submission.st.informatik.tu-darmstadt.de/course/se18/solution/2).
+    - [X] [Abgabe](https://github.com/xfbs/se/blob/master/exercises/ex02/solution/solution.pdf). *Not Graded*.
+- [ ] Exercise 3: Anforderungsanalyse (Abgabe 16.11.2018): [Handout](https://submission.st.informatik.tu-darmstadt.de/course/se18/handouts/3), [Template](https://submission.st.informatik.tu-darmstadt.de/course/se18/templates/3).
+- [ ] Exercise 4
+- [ ] Exercise 5
+- [ ] Exercise 6
+- [ ] Exercise 7
+- [ ] Exercise 8
+- [ ] Exercise 9
+- [ ] Exercise 10
+- [ ] Exercise 11
+- [ ] Exercise 12
 
 ## Literatur
 
