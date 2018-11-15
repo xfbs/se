@@ -26,10 +26,14 @@ The goal is to enable you to systematically carry out small(er) commercial or op
 
 ## Folien
 
-*   [Organisation](http://stg-tud.github.io/eise/WS18-SE-01-Organization.pdf).
-*   [What is Software Engineering?](http://stg-tud.github.io/eise/WS18-SE-02-What_is_Software_Engineering.pdf).
-*   [Software Project Management](http://stg-tud.github.io/eise/WS18-SE-03-Software_Project_Management.pdf).
-*   [Software Process Models](http://stg-tud.github.io/eise/WS18-SE-04-Software_Process_Models.pdf).
+*   [Organisation](http://stg-tud.github.io/eise/WS18-SE-01-Organization.pdf)
+*   [What is Software Engineering?](http://stg-tud.github.io/eise/WS18-SE-02-What_is_Software_Engineering.pdf)
+*   [Software Project Management](http://stg-tud.github.io/eise/WS18-SE-03-Software_Project_Management.pdf)
+*   [Software Process Models](http://stg-tud.github.io/eise/WS18-SE-04-Software_Process_Models.pdf)
+*   [Requirements Engineering](http://stg-tud.github.io/eise/WS18-SE-05-Requirements_Engineering.pdf)
+*   [Requirements Engineering - Use Cases](http://stg-tud.github.io/eise/WS18-SE-06-Requirements_Engineering-Use_Cases.pdf)
+*   [Modelling - Domain Model](http://stg-tud.github.io/eise/WS18-SE-07-Modeling-static_Part.pdf)
+*   [Dynamic Modelling](http://stg-tud.github.io/eise/WS18-SE-08-Modeling-dynamic_Part.pdf)
 
 ## Übungen
 
