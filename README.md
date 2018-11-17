@@ -41,7 +41,8 @@ The goal is to enable you to systematically carry out small(er) commercial or op
     - [X] [Abgabe](exercises/ex01). *Not Graded*.
 - [X] Exercise 2: Projektplanung (Abgabe 09.11.2018): [Handout](https://submission.st.informatik.tu-darmstadt.de/course/se18/handouts/2), [Template](https://submission.st.informatik.tu-darmstadt.de/course/se18/templates/2). [Solution](https://submission.st.informatik.tu-darmstadt.de/course/se18/solution/2).
     - [X] [Abgabe](https://github.com/xfbs/se/blob/master/exercises/ex02/solution/solution.pdf). *Not Graded*.
-- [ ] Exercise 3: Anforderungsanalyse (Abgabe 16.11.2018): [Handout](https://submission.st.informatik.tu-darmstadt.de/course/se18/handouts/3), [Template](https://submission.st.informatik.tu-darmstadt.de/course/se18/templates/3).
+- [X] Exercise 3: Anforderungsanalyse (Abgabe 16.11.2018): [Handout](https://submission.st.informatik.tu-darmstadt.de/course/se18/handouts/3), [Template](https://submission.st.informatik.tu-darmstadt.de/course/se18/templates/3).
+    - [X] [Abgabe](exercises/ex03/solution/solution.pdf). *Not Graded*.
 - [ ] Exercise 4
 - [ ] Exercise 5
 - [ ] Exercise 6
